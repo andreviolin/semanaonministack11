@@ -1,0 +1,42 @@
+const express = require('express');
+
+const app = express();
+
+app.use(express.json());
+
+/**
+ * rotas e recursos
+ */
+
+ /**
+  * GET: usado quando eu quizer buscar uma informação do bAck-end
+  * Post: sempre que for criar uma informação no back-end
+  * PUT: Alterar uma informação no back-end
+  * DELETE: Deletar uma informação no back-end
+  */
+
+/**
+ * Tipos de parametros
+ * 
+ * Query Params: Parametros nomeados enviados apos "?" (Filtros, Paginação)
+ * Route(rotas) Params: Parametros utilizados para identificar recursos
+ * Request Body: corpo da requisição, utilizado para criar ou alterar recursos"dados"
+ */
+
+ /**
+  * banco SQLlite
+  */
+
+// primeira rota
+app.post('/users', (request, response) => {
+    const body = request.body;
+
+    console.log(body);
+
+    return response.json({
+        evento: 'semana onmistack 11.0',
+        aluno: 'André anderson'
+    });
+});
+
+app.listen(3331); 
